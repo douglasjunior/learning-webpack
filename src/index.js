@@ -1,4 +1,5 @@
-import _ from 'lodash';
+import React, { PureComponent } from 'react';
+import { render } from 'react-dom';
 
 import './styles.scss';
 
@@ -6,6 +7,16 @@ import DivComponent from './DivComponent';
 import DateComponent from './DateComponent';
 import ImgComponent from './ImgComponent';
 
-document.body.appendChild(DivComponent());
-document.body.appendChild(DateComponent());
-document.body.appendChild(ImgComponent());
+class App extends PureComponent {
+    render() {
+        return (
+            <div>
+                <DivComponent />
+                <DateComponent />
+                <ImgComponent />
+            </div>
+        )
+    }
+}
+
+render(<App />, document.getElementById('root'));

@@ -1,8 +1,9 @@
-import moment from 'moment';
+import React from 'react';
 
-export default () => {
-    const element = document.createElement('p');
-    element.innerHTML = `Hoje é ${moment().format('DD/MM/YYYY')}`;
-    element.classList.add('hello');
-    return element;
-}
+import dateFormat from 'date-fns/format';
+
+export default () => (
+    <p className="hello">
+        Hoje é {dateFormat(new Date(), 'DD/MM/YYYY')}
+    </p>
+)

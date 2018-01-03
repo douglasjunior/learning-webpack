@@ -1,6 +1,17 @@
-export default () => {
-    const element = document.createElement('div');
-    element.innerHTML = _.join(['Olá', 'webpack', '!!!'], ' ');
-    element.classList.add('hello');
-    return element;
+import React, { PureComponent } from 'react';
+
+import _join from 'lodash/join';
+
+export default class DivComponent extends PureComponent {
+
+    render() {
+        const text = _join(['Olá', 'webpack', '!!!'], ' ');
+
+        return (
+            <div className="hello">
+                {text}
+            </div>
+        )
+    }
+
 }
