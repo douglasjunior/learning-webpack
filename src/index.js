@@ -5,6 +5,8 @@ import './styles.scss';
 
 import DivComponent from './DivComponent';
 import DateComponent from './DateComponent';
+import ButtonComponent from './ButtonComponent';
+import CounterComponent from './CounterComponent';
 import ImgComponent from './ImgComponent';
 
 class App extends PureComponent {
@@ -13,6 +15,8 @@ class App extends PureComponent {
             <div>
                 <DivComponent />
                 <DateComponent />
+                <ButtonComponent />
+                <CounterComponent />
                 <ImgComponent />
             </div>
         )
